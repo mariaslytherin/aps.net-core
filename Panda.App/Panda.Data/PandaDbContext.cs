@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Panda.Domain;
 
 namespace Panda.Data
 {

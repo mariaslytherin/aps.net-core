@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Panda.App", "Panda.App\Panda.App.csproj", "{4789DBFD-9286-496D-9539-CCB53872E148}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Panda.Data", "Panda.Data\Panda.Data.csproj", "{CDFE3A43-0C91-4ECE-8F07-3793CB3AC478}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Panda.Data", "Panda.Data\Panda.Data.csproj", "{CDFE3A43-0C91-4ECE-8F07-3793CB3AC478}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Panda.Domain", "Panda.Domain\Panda.Domain.csproj", "{562BE1DB-B3DF-4747-814A-6F408FBD4CBE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{CDFE3A43-0C91-4ECE-8F07-3793CB3AC478}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDFE3A43-0C91-4ECE-8F07-3793CB3AC478}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDFE3A43-0C91-4ECE-8F07-3793CB3AC478}.Release|Any CPU.Build.0 = Release|Any CPU
+		{562BE1DB-B3DF-4747-814A-6F408FBD4CBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{562BE1DB-B3DF-4747-814A-6F408FBD4CBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{562BE1DB-B3DF-4747-814A-6F408FBD4CBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{562BE1DB-B3DF-4747-814A-6F408FBD4CBE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

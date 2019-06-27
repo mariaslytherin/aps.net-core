@@ -1,10 +1,13 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Panda.Data;
+using Panda.Domain;
 
 namespace Panda.App
 {
@@ -20,7 +23,11 @@ namespace Panda.App
         public void ConfigureServices(IServiceCollection services)
         {
               services.AddDbContext<PandaDbContext>(options =>
-                options.UseSqlServer(this.Configuration[""]));
+                options.UseSqlServer(this.Configuration.GetConnectionString("ConnectionString:DefaultConnection")));
+
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<PandaDbContext>()
+                .AddDefaultTokenProviders();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
@@ -31,6 +38,7 @@ namespace Panda.App
             app.UseStaticFiles();
             app.UseDeveloperExceptionPage();
 
+            app.UseAuthentication();
             app.UseMvcWithDefaultRoute();
         }
     }
