@@ -23,11 +23,23 @@ namespace Panda.App
         public void ConfigureServices(IServiceCollection services)
         {
               services.AddDbContext<PandaDbContext>(options =>
-                options.UseSqlServer(this.Configuration.GetConnectionString("ConnectionString:DefaultConnection")));
+                options.UseSqlServer(this.Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddIdentity<IdentityUser, IdentityRole>()
                 .AddEntityFrameworkStores<PandaDbContext>()
                 .AddDefaultTokenProviders();
+
+            services.Configure<IdentityOptions>(options =>
+         {
+             options.Password.RequireDigit = false;
+             options.Password.RequireLowercase = false;
+             options.Password.RequireNonAlphanumeric = false;
+             options.Password.RequiredUniqueChars = 0;
+             options.Password.RequireUppercase = false;
+             options.Password.RequiredLength = 3;
+
+             options.User.RequireUniqueEmail = true;
+         });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
