@@ -25,7 +25,7 @@ namespace Panda.App
               services.AddDbContext<PandaDbContext>(options =>
                 options.UseSqlServer(this.Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddIdentity<IdentityUser, IdentityRole>()
+            services.AddIdentity<PandaUser, PandaUserRole>()
                 .AddEntityFrameworkStores<PandaDbContext>()
                 .AddDefaultTokenProviders();
 
@@ -46,7 +46,12 @@ namespace Panda.App
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            app.UseHttpsRedirection();
+            using (var context = new PandaDbContext())
+            {
+                context.Database.EnsureCreated();
+            }
+
+                app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseDeveloperExceptionPage();
 

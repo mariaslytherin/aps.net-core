@@ -10,7 +10,9 @@ namespace Panda.Domain
 
         public double Weight { get; set; }
 
-        public string ShoppingAdress { get; set; }
+        public string ShippingAddress { get; set; }
+
+        public string StatusId { get; set; }
 
         public PackageStatus Status { get; set; }
 
@@ -19,9 +21,5 @@ namespace Panda.Domain
         public string RecipientId { get; set; }
 
         public PandaUser Recipient { get; set; }
-
-        public string ReceiptId { get; set; }
-
-        public Receipt Receipt { get; set; }
     }
 }

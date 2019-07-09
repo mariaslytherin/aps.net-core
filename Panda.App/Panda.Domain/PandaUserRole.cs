@@ -4,6 +4,5 @@ namespace Panda.Domain
 {
     public class PandaUserRole : IdentityRole
     {
-        
     }
 }
