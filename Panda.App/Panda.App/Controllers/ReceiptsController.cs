@@ -1,9 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Panda.App.Models.Receipt;
-using Panda.Data;
 using Panda.Domain;
+using Panda.Services;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;

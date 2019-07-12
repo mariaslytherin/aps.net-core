@@ -1,9 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Panda.App.Models.Package;
-using Panda.Data;
 using Panda.Domain;
+using Panda.Services;
 using System;
 using System.Globalization;
 using System.Linq;

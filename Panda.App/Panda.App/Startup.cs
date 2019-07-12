@@ -51,7 +51,7 @@ namespace Panda.App
                 context.Database.EnsureCreated();
             }
 
-                app.UseHttpsRedirection();
+            app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseDeveloperExceptionPage();
 

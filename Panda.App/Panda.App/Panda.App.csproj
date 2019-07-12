@@ -16,11 +16,12 @@
   <ItemGroup>
     <ProjectReference Include="..\Panda.Data\Panda.Data.csproj" />
     <ProjectReference Include="..\Panda.Domain\Panda.Domain.csproj" />
+    <ProjectReference Include="..\Panda.Service\Panda.Services.csproj" />
   </ItemGroup>
 
 
   <ItemGroup>
-    <Folder Include="Views\Receipts\" />
+    <Folder Include="Views\Package\" />
   </ItemGroup>
 
 </Project>

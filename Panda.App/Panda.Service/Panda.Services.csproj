@@ -6,7 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Panda.App\Panda.App.csproj" />
     <ProjectReference Include="..\Panda.Data\Panda.Data.csproj" />
     <ProjectReference Include="..\Panda.Domain\Panda.Domain.csproj" />
   </ItemGroup>
